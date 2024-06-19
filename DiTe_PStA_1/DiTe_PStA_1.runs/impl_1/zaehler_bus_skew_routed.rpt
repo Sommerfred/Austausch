@@ -1,0 +1,15 @@
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2020.2 (win64) Build 3064766 Wed Nov 18 09:12:45 MST 2020
+| Date         : Wed Jun 19 12:58:13 2024
+| Host         : DESKTOP-VVVT9JG running 64-bit major release  (build 9200)
+| Command      : report_bus_skew -warn_on_violation -file zaehler_bus_skew_routed.rpt -pb zaehler_bus_skew_routed.pb -rpx zaehler_bus_skew_routed.rpx
+| Design       : zaehler
+| Device       : 7s15-ftgb196
+| Speed File   : -1  PRODUCTION 1.23 2018-06-13
+------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Bus Skew Report
+
+No bus skew constraints
+

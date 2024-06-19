@@ -1,0 +1,14 @@
+#-----------------------------------------------------------
+# Webtalk v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Wed Jun 19 11:56:58 2024
+# Process ID: 15012
+# Current directory: C:/Vivado_projects/DiTe/Vivado/DiTe_PStA_1/DiTe_PStA_1.sim/sim_1/behav/xsim
+# Command line: wbtcv.exe -mode batch -source C:/Vivado_projects/DiTe/Vivado/DiTe_PStA_1/DiTe_PStA_1.sim/sim_1/behav/xsim/xsim.dir/zaehler_sim_behav/webtalk/xsim_webtalk.tcl -notrace
+# Log file: C:/Vivado_projects/DiTe/Vivado/DiTe_PStA_1/DiTe_PStA_1.sim/sim_1/behav/xsim/webtalk.log
+# Journal file: C:/Vivado_projects/DiTe/Vivado/DiTe_PStA_1/DiTe_PStA_1.sim/sim_1/behav/xsim\webtalk.jou
+#-----------------------------------------------------------
+source C:/Vivado_projects/DiTe/Vivado/DiTe_PStA_1/DiTe_PStA_1.sim/sim_1/behav/xsim/xsim.dir/zaehler_sim_behav/webtalk/xsim_webtalk.tcl -notrace
+webtalk_transmit: Time (s): cpu = 00:00:00 ; elapsed = 00:00:06 . Memory (MB): peak = 116.359 ; gain = 23.395
+INFO: [Common 17-206] Exiting Webtalk at Wed Jun 19 11:57:04 2024...
