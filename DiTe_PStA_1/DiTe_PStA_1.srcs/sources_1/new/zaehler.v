@@ -28,8 +28,10 @@ module zaehler(
         output reg euroBuffer,
         output reg fiftyTap,
         output reg euroTap,
-        output reg productLed,
-        output reg productchangeLed
+        output reg SellLed,
+        output reg ReturnLed,
+        output reg euroLed,
+        output reg fiftyLed
     );
 
 
@@ -42,14 +44,15 @@ wire euroBufferOut = euroBuffer;
 wire fiftyOut = fifty;
 wire euroOut = euro;
 
-//weiﬂ ich ja nich 
 initial begin
     fiftyBuffer <= 1'b0; 
     euroBuffer <= 1'b0;
+    SellLed <= 1'b0;
+    ReturnLed <= 1'b0;
 end 
 
 always @(posedge sys_clk)begin
-    if (fiftyInput==1)              //Input mus =0 nach Schaltplan?
+    if (fiftyInput==1)              //Input muss =0 nach Schaltplan?
         fiftyBuffer <= 1'b1;
     else
         fiftyBuffer <= 1'b0;
@@ -66,58 +69,44 @@ always @(posedge sys_clk)begin
         euroTap <= 1'b1;
     else
         euroTap <= 1'b0;
-        
-    // code to do
-   // fiftybuffer <= fiftyInput;
-   // euroBuffer <= euroInput;
-    if(((euroOut==0)&&(euroTapOut==0)&&(fiftyTapOut==1)&&((fiftyOut==0)||fiftyOut==1))||((euroOut==0)&&(fiftyOut==1)&&(euroTapOut==1)&&(fiftyTapOut==0))||(fiftyOut==1))
+
+    if (((euroOut==0)&&(fiftyOut==0)&&(euroTapOut==0)&&(fiftyTapOut==1)) // 50 Cent Einwurf
+    || ((euroOut==0)&&(fiftyOut==1)&&(euroTapOut==1)&&(fiftyTapOut==0))  // 1 Euro Einwurf bei bestehenden 50 Cent
+    || ((euroOut==0)&&(fiftyOut==1)&&(euroTapOut==0)&&(fiftyTapOut==0))) // kein Einwurf bei 50 Cent
         fifty <= 1'b1;
     else
-        fifty <= 1'b0;    
-        
-    if (((euroOut==0)&&(euroTapOut==1)&&(fiftyTapOut==0))||(((euroOut==0)&&(fiftyOut==1)&&(euroTapOut==0)&&(fiftyTapOut==1)))||(euroOut==1))
+        fifty <= 1'b0;
+    if ((euroOut==0)&&(fiftyOut==1)&&(euroTapOut==0)&&(fiftyTapOut==1))   //Hardcodierung: Reset bei 50 Cent Einwurf bei bestehenden 50 Cent
+        fifty <= 1'b0; 
+    if (((euroOut==0)&&(euroTapOut==1)&&(fiftyTapOut==0))                 // 1 Euro Einwurf 
+    || ((euroOut==0)&&(fiftyOut==1)&&(euroTapOut==0)&&(fiftyTapOut==1)))  // 1 Euro Einwurf bei bestehenden 50 Cent 
         euro <= 1'b1;
     else
         euro <= 1'b0;
-    if ((fiftyOut==1)&&(fiftyTapOut==1))
-        fifty <= 1'b0;  
-    
+        
 //Output via LEDs
+// Inputfeedback
+    if (fiftyOut==1)
+        fiftyLed <= 1'b1;                // 50ct LED
+    else
+        fiftyLed <= 1'b0;
     if (euroOut==1)
-        productLed <= 1'b1;
-    if ((euroOut==1)&&(fiftyOut==1))    
-        productchangeLed <= 1'b1;
-    if ((euroOut==1)&&(fiftyOut==1))    
-        productLed <= 1'b0;
-        
-// Reset bei Dopeelinput
-    if ((euroInput==1)&&(fiftyInput==1))
-        fiftyBuffer <= 1'b0;
-    if ((euroInput==1)&&(fiftyInput==1))
-        euroBuffer <= 1'b0;
- end   
-/*
-always @(posedge sys_clk)begin
-    if(((zahl1_out==0)&&(flag1==0)&&(flag0==1)&&((zahl0_out==0)||zahl0_out==1))||((zahl1_out==0)&&(zahl0_out==1)&&(flag1==1)&&(flag0==0)))
-        zahl0 <= 1'b1;
+        euroLed <= 1'b1;                // 1Ä LED
     else
-        zahl0 <= 1'b0;    
-        
-    if (((zahl1_out==0)&&(flag1==1)&&(flag0==0))||(((zahl1_out==0)&&(zahl0_out==1)&&(flag1==0)&&(flag0==1))))
-        zahl1 <= 1'b1;
-    else
-        zahl1 <= 1'b0;
+        euroLed <= 1'b0;
 
-end
-
-always @(posedge sys_clk)begin
-    if( ~((~fiftyBufferOut)&&(~fiftyInput)) && ~(fiftyBufferOut))
-        fiftyTap <= 1'b1;
-    else
-        fiftyTap <= 1'b0;
-    if( ~((~euroBufferOut)&&(~euroInput)) && ~(euroBufferOut))
-        euroTap <= 1'b1;
-    else
-        euroTap <= 1'b0;
-*/
+// Outputfeedback
+    if ((euroOut==1)&&(fiftyOut==0)) begin
+        SellLed <= 1'b1;                 // S LED
+        #10; // sleeps for 10ns
+    end else
+        SellLed <= 1'b0;
+    if ((euroOut==1)&&(fiftyOut==1)) begin
+        ReturnLed <= 1'b1;
+        SellLed <= 1'b1;                 // R LED 
+        #10;
+    end else
+        ReturnLed <= 1'b0;
+        
+end   
 endmodule

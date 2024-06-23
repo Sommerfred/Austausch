@@ -1165,3 +1165,90 @@ source zaehler_sim.tcl
 INFO: [USF-XSim-96] XSim completed. Design snapshot 'zaehler_sim_behav' loaded.
 INFO: [USF-XSim-97] XSim simulation ran for 1000ns
 launch_simulation: Time (s): cpu = 00:00:04 ; elapsed = 00:00:08 . Memory (MB): peak = 2215.031 ; gain = 18.977
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/Vivado_projects/DiTe/Vivado/DiTe_PStA_1/DiTe_PStA_1.runs/synth_1
+
+launch_runs synth_1 -jobs 6
+[Wed Jun 19 14:49:06 2024] Launched synth_1...
+Run output will be captured here: C:/Vivado_projects/DiTe/Vivado/DiTe_PStA_1/DiTe_PStA_1.runs/synth_1/runme.log
+open_run synth_1 -name synth_1
+Design is defaulting to impl run constrset: constrs_1
+Design is defaulting to synth run part: xc7s15ftgb196-1
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 2869.461 ; gain = 0.000
+INFO: [Project 1-479] Netlist was created with Vivado 2020.2
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Parsing XDC File [C:/Vivado_projects/DiTe/Vivado/DiTe_PStA_1/DiTe_PStA_1.srcs/constrs_1/new/zeahler_constr.xdc]
+Finished Parsing XDC File [C:/Vivado_projects/DiTe/Vivado/DiTe_PStA_1/DiTe_PStA_1.srcs/constrs_1/new/zeahler_constr.xdc]
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2869.461 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Vivado_projects/DiTe/Vivado/DiTe_PStA_1/DiTe_PStA_1.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'zaehler_sim' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Vivado_projects/DiTe/Vivado/DiTe_PStA_1/DiTe_PStA_1.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj zaehler_sim_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Vivado_projects/DiTe/Vivado/DiTe_PStA_1/DiTe_PStA_1.srcs/sources_1/new/zaehler.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module zaehler
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Vivado_projects/DiTe/Vivado/DiTe_PStA_1/DiTe_PStA_1.srcs/sim_1/new/zaehler_sim.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module zaehler_sim
+INFO: [VRFC 10-2458] undeclared symbol fiftyBuffer, assumed default net type wire [C:/Vivado_projects/DiTe/Vivado/DiTe_PStA_1/DiTe_PStA_1.srcs/sim_1/new/zaehler_sim.v:44]
+INFO: [VRFC 10-2458] undeclared symbol euroBuffer, assumed default net type wire [C:/Vivado_projects/DiTe/Vivado/DiTe_PStA_1/DiTe_PStA_1.srcs/sim_1/new/zaehler_sim.v:45]
+INFO: [VRFC 10-2458] undeclared symbol fiftyTap, assumed default net type wire [C:/Vivado_projects/DiTe/Vivado/DiTe_PStA_1/DiTe_PStA_1.srcs/sim_1/new/zaehler_sim.v:46]
+INFO: [VRFC 10-2458] undeclared symbol euroTap, assumed default net type wire [C:/Vivado_projects/DiTe/Vivado/DiTe_PStA_1/DiTe_PStA_1.srcs/sim_1/new/zaehler_sim.v:47]
+INFO: [VRFC 10-2458] undeclared symbol productLed, assumed default net type wire [C:/Vivado_projects/DiTe/Vivado/DiTe_PStA_1/DiTe_PStA_1.srcs/sim_1/new/zaehler_sim.v:48]
+INFO: [VRFC 10-2458] undeclared symbol productchangeLed, assumed default net type wire [C:/Vivado_projects/DiTe/Vivado/DiTe_PStA_1/DiTe_PStA_1.srcs/sim_1/new/zaehler_sim.v:49]
+WARNING: [VRFC 10-159] /* in comment [C:/Vivado_projects/DiTe/Vivado/DiTe_PStA_1/DiTe_PStA_1.srcs/sim_1/new/zaehler_sim.v:63]
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Vivado_projects/DiTe/Vivado/DiTe_PStA_1/DiTe_PStA_1.sim/sim_1/behav/xsim'
+"xelab -wto 30a4219e933145c199d8609c42bd0a50 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot zaehler_sim_behav xil_defaultlib.zaehler_sim xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2020.2
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2020.2/bin/unwrapped/win64.o/xelab.exe -wto 30a4219e933145c199d8609c42bd0a50 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot zaehler_sim_behav xil_defaultlib.zaehler_sim xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.zaehler
+Compiling module xil_defaultlib.zaehler_sim
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot zaehler_sim_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Vivado_projects/DiTe/Vivado/DiTe_PStA_1/DiTe_PStA_1.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "zaehler_sim_behav -key {Behavioral:sim_1:Functional:zaehler_sim} -tclbatch {zaehler_sim.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2020.2
+Time resolution is 1 ps
+source zaehler_sim.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'zaehler_sim_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:04 ; elapsed = 00:00:07 . Memory (MB): peak = 2869.461 ; gain = 0.000
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+exit
+INFO: [Common 17-206] Exiting Vivado at Wed Jun 19 15:13:32 2024...

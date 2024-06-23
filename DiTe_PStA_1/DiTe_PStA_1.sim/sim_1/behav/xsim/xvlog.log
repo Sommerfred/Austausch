@@ -8,4 +8,3 @@ INFO: [VRFC 10-2458] undeclared symbol fiftyTap, assumed default net type wire [
 INFO: [VRFC 10-2458] undeclared symbol euroTap, assumed default net type wire [C:/Vivado_projects/DiTe/Vivado/DiTe_PStA_1/DiTe_PStA_1.srcs/sim_1/new/zaehler_sim.v:47]
 INFO: [VRFC 10-2458] undeclared symbol productLed, assumed default net type wire [C:/Vivado_projects/DiTe/Vivado/DiTe_PStA_1/DiTe_PStA_1.srcs/sim_1/new/zaehler_sim.v:48]
 INFO: [VRFC 10-2458] undeclared symbol productchangeLed, assumed default net type wire [C:/Vivado_projects/DiTe/Vivado/DiTe_PStA_1/DiTe_PStA_1.srcs/sim_1/new/zaehler_sim.v:49]
-WARNING: [VRFC 10-159] /* in comment [C:/Vivado_projects/DiTe/Vivado/DiTe_PStA_1/DiTe_PStA_1.srcs/sim_1/new/zaehler_sim.v:63]

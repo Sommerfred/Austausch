@@ -60,7 +60,7 @@ initial begin
     #30 key_in = 2'b10;
     #30 key_in = 2'b00;
 end  
-/*
+*/
 //fifty + fifty
 initial begin
     fifty=0;
@@ -71,10 +71,14 @@ initial begin
     #30 key_in = 2'b00;
     #30 key_in = 2'b01;
     #30 key_in = 2'b00;
+     #30 key_in = 2'b10;
+    #30 key_in = 2'b00;
+    #30 key_in = 2'b00;
+    #30 key_in = 2'b00;
 end 
-*/
+
 //euro 
-//*
+/*
 initial begin
     fifty=0;
     euro=0; 
@@ -85,6 +89,6 @@ initial begin
     #30 key_in = 2'b00;
     #30 key_in = 2'b00;
 end   
-//*/      
+*/      
 always #2 clk = ~clk;       
 endmodule

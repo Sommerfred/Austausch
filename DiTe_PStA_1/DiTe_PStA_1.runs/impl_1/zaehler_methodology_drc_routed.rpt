@@ -1,7 +1,7 @@
 Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2020.2 (win64) Build 3064766 Wed Nov 18 09:12:45 MST 2020
-| Date         : Wed Jun 19 12:58:12 2024
+| Date         : Sun Jun 23 11:07:27 2024
 | Host         : DESKTOP-VVVT9JG running 64-bit major release  (build 9200)
 | Command      : report_methodology -file zaehler_methodology_drc_routed.rpt -pb zaehler_methodology_drc_routed.pb -rpx zaehler_methodology_drc_routed.rpx
 | Design       : zaehler
@@ -23,58 +23,73 @@ Table of Contents
           Floorplan: design_1
       Design limits: <entire design considered>
              Max violations: <unlimited>
-             Violations found: 9
+             Violations found: 12
 +-----------+------------------+-----------------------------+------------+
 | Rule      | Severity         | Description                 | Violations |
 +-----------+------------------+-----------------------------+------------+
-| TIMING-17 | Critical Warning | Non-clocked sequential cell | 9          |
+| TIMING-17 | Critical Warning | Non-clocked sequential cell | 12         |
 +-----------+------------------+-----------------------------+------------+
 
 2. REPORT DETAILS
 -----------------
 TIMING-17#1 Critical Warning
 Non-clocked sequential cell  
-The clock pin euroBuffer_reg/C is not reached by a timing clock
+The clock pin ReturnLed_reg/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#2 Critical Warning
 Non-clocked sequential cell  
-The clock pin euroTap_reg/C is not reached by a timing clock
+The clock pin SellLed_reg/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#3 Critical Warning
 Non-clocked sequential cell  
-The clock pin euroTap_reg_lopt_replica/C is not reached by a timing clock
+The clock pin euroBuffer_reg/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#4 Critical Warning
 Non-clocked sequential cell  
-The clock pin euro_reg/C is not reached by a timing clock
+The clock pin euroLed_reg/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#5 Critical Warning
 Non-clocked sequential cell  
-The clock pin fiftyBuffer_reg/C is not reached by a timing clock
+The clock pin euroTap_reg/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#6 Critical Warning
 Non-clocked sequential cell  
-The clock pin fiftyTap_reg/C is not reached by a timing clock
+The clock pin euroTap_reg_lopt_replica/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#7 Critical Warning
 Non-clocked sequential cell  
-The clock pin fiftyTap_reg_lopt_replica/C is not reached by a timing clock
+The clock pin euro_reg/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#8 Critical Warning
 Non-clocked sequential cell  
-The clock pin fifty_reg/C is not reached by a timing clock
+The clock pin fiftyBuffer_reg/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#9 Critical Warning
 Non-clocked sequential cell  
-The clock pin productLed_reg/C is not reached by a timing clock
+The clock pin fiftyLed_reg/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#10 Critical Warning
+Non-clocked sequential cell  
+The clock pin fiftyTap_reg/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#11 Critical Warning
+Non-clocked sequential cell  
+The clock pin fiftyTap_reg_lopt_replica/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#12 Critical Warning
+Non-clocked sequential cell  
+The clock pin fifty_reg/C is not reached by a timing clock
 Related violations: <none>
 
 
