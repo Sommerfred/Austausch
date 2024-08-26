@@ -1,0 +1,119 @@
+#-----------------------------------------------------------
+# Vivado v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Wed Jun 19 11:19:07 2024
+# Process ID: 14076
+# Current directory: C:/Vivado_projects/DiTe/Vivado/DiTe_PStA_1
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent14784 C:\Vivado_projects\DiTe\Vivado\DiTe_PStA_1\DiTe_PStA_1.xpr
+# Log file: C:/Vivado_projects/DiTe/Vivado/DiTe_PStA_1/vivado.log
+# Journal file: C:/Vivado_projects/DiTe/Vivado/DiTe_PStA_1\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Vivado_projects/DiTe/Vivado/DiTe_PStA_1/DiTe_PStA_1.xpr
+update_compile_order -fileset sources_1
+reset_run synth_1
+launch_runs synth_1 -jobs 6
+wait_on_run synth_1
+open_run synth_1 -name synth_1
+reset_run synth_1
+launch_runs synth_1 -jobs 6
+wait_on_run synth_1
+reset_run synth_1
+launch_runs synth_1 -jobs 6
+wait_on_run synth_1
+close_design
+open_run synth_1 -name synth_1
+reset_run synth_1
+launch_runs synth_1 -jobs 6
+wait_on_run synth_1
+close_design
+open_run synth_1 -name synth_1
+reset_run synth_1
+launch_runs synth_1 -jobs 6
+wait_on_run synth_1
+close_design
+open_run synth_1 -name synth_1
+reset_run synth_1
+launch_runs synth_1 -jobs 6
+wait_on_run synth_1
+close_design
+open_run synth_1 -name synth_1
+launch_simulation
+source zaehler_sim.tcl
+reset_run synth_1
+close_sim
+launch_simulation
+source zaehler_sim.tcl
+close_sim
+launch_simulation
+source zaehler_sim.tcl
+close_sim
+launch_simulation
+source zaehler_sim.tcl
+close_sim
+launch_simulation
+source zaehler_sim.tcl
+close_sim
+launch_simulation
+launch_simulation
+source zaehler_sim.tcl
+close_sim
+launch_simulation
+source zaehler_sim.tcl
+close_sim
+launch_simulation
+source zaehler_sim.tcl
+close_sim
+launch_simulation
+source zaehler_sim.tcl
+close_sim
+launch_simulation
+source zaehler_sim.tcl
+close_sim
+launch_simulation
+source zaehler_sim.tcl
+close_sim
+launch_simulation
+source zaehler_sim.tcl
+close_sim
+launch_simulation
+source zaehler_sim.tcl
+close_sim
+launch_simulation
+source zaehler_sim.tcl
+launch_runs synth_1 -jobs 6
+wait_on_run synth_1
+close_design
+open_run synth_1 -name synth_1
+launch_runs impl_1 -jobs 6
+wait_on_run impl_1
+reset_run synth_1
+launch_runs synth_1 -jobs 6
+wait_on_run synth_1
+close_design
+open_run synth_1 -name synth_1
+launch_runs impl_1 -jobs 6
+wait_on_run impl_1
+launch_runs impl_1 -to_step write_bitstream -jobs 6
+wait_on_run impl_1
+close_design
+open_run impl_1
+reset_run synth_1
+launch_runs synth_1 -jobs 6
+wait_on_run synth_1
+launch_runs impl_1 -jobs 6
+wait_on_run impl_1
+launch_runs impl_1 -to_step write_bitstream -jobs 6
+wait_on_run impl_1
+close_sim
+launch_simulation
+source zaehler_sim.tcl
+reset_run synth_1
+launch_runs synth_1 -jobs 6
+wait_on_run synth_1
+open_run synth_1 -name synth_1
+close_sim
+launch_simulation
+source zaehler_sim.tcl
+close_sim

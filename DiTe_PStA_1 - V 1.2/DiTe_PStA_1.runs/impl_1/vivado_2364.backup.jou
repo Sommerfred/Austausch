@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Sat Aug 24 10:20:21 2024
+# Process ID: 2364
+# Current directory: C:/Vivado_projects/DiTe/Vivado/DiTe_PStA_1/DiTe_PStA_1.runs/impl_1
+# Command line: vivado.exe -log zaehler.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source zaehler.tcl -notrace
+# Log file: C:/Vivado_projects/DiTe/Vivado/DiTe_PStA_1/DiTe_PStA_1.runs/impl_1/zaehler.vdi
+# Journal file: C:/Vivado_projects/DiTe/Vivado/DiTe_PStA_1/DiTe_PStA_1.runs/impl_1\vivado.jou
+#-----------------------------------------------------------
+source zaehler.tcl -notrace

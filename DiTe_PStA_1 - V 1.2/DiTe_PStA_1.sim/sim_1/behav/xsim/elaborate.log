@@ -1,0 +1,15 @@
+Vivado Simulator 2020.2
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2020.2/bin/unwrapped/win64.o/xelab.exe -wto 30a4219e933145c199d8609c42bd0a50 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot zaehler_sim_behav xil_defaultlib.zaehler_sim xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 32 for port 'counter' [C:/Vivado_projects/DiTe/Vivado/DiTe_PStA_1/DiTe_PStA_1.srcs/sim_1/new/zaehler_sim.v:67]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.zaehler_default
+Compiling module xil_defaultlib.zaehler_sim
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot zaehler_sim_behav
